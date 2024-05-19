@@ -10,3 +10,4 @@ services:
       SSH_DISCORD_WEBHOOK_URL: ${SSH_DISCORD_WEBHOOK_URL}
     volumes:
       - /var/log/:/var/log
+    restart: on-failure
