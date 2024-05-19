@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context : "./"
+      dockerfile: "Dockerfile"
+    image: "ssh-login-tracker"  
+    environment:
+      HOST_NAME: ${HOSTNAME}
+      SSH_DISCORD_WEBHOOK_URL: ${SSH_DISCORD_WEBHOOK_URL}
+    volumes:
+      - /var/log/:/var/log
